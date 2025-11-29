@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
 load_dotenv()  # load OPENAI_API_KEY etc. if needed later
 
-from langchain_core.messages import HumanMessage
+from langchain_core.messages import HumanMessage, AIMessage
 
 from graph import build_graph
 
@@ -34,6 +34,7 @@ def main():
         # The last message should now be an AIMessage; print its content
         last_msg = state["messages"][-1]
         print("Agent:", last_msg.content)
+
 
 
 if __name__ == "__main__":
