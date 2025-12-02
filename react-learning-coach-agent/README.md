@@ -217,15 +217,15 @@ User Input
     ↓
 Onboarding Node (Structured Output)
     ↓
-Planning Node (Multi-stage Plan)
-    ↓
-Coaching Node ←──────┐
-    ↓                │
-Tools Called:        │
-- fetch_docs()       │ (Loop until done)
-- analyze_code()     │
-    ↓                │
-Response + RAG ──────┘
+Planning Node (Multi-stage Plan) ←─────┐
+    ↓                                  │
+Coaching Node                          │
+    ↓                                  │
+Tools Called:                          │
+- fetch_docs()                         │ (Loop until done)
+- analyze_code()                       │
+    ↓                                  │
+Response + RAG ────────────────────────┘
     ↓
 Re-planning (if feature added)
     ↓
