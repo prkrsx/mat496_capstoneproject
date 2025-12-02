@@ -362,7 +362,8 @@ I had planned to achieve a **React/TypeScript Learning Coach** that:
 **What could be improved:**
 - The docs store is currently small and curated - could be expanded with more comprehensive React/TypeScript documentation
 - Code analysis tool uses simple methods to examine code and return - could integrate actual linters or TypeScript compiler checks for indepth examination enhancing learner's knowledge
-- User Experience on Web UI can be improved to include commands for seamless conversation at every step of an interaction
+- User Experience on Web UI can be improved to include commands at every step of an interaction to either add features or jump to another stage for seamless interaction
 - Web UI could add more features like saving conversation history or exporting learning plans
+- The project is an opinionated workflow of an agent helping build the project from ground up. So if one asks the agent to review a code snippet without starting a project, it will hallucinate.
 
 **Overall**: This project successfully demonstrates mastery of LangGraph and all course concepts while creating a genuinely useful learning tool. The agent maintains coherent state across complex interactions, leverages RAG effectively, and provides meaningful educational guidance. I am satisfied with the comprehensive implementation and the practical utility of the final product.
