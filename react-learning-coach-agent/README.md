@@ -13,17 +13,19 @@ This project is a **React/TypeScript Learning Coach Agent** built with Python an
 - Adapts the learning path when you want to add new features
 
 **Key Features:**
-- 🎯 Personalized learning paths (beginner/intermediate/advanced)
-- 📚 Structured multi-stage project planning
-- 🎓 Coach-mode teaching (hints over solutions)
-- 🔍 Semantic search over React/TypeScript documentation
-- 💡 Code analysis and feedback tools
-- 🔄 Dynamic re-planning for scope changes
-- 💬 Three interaction modes: CLI, LangGraph Studio, and Web UI
+-  Personalized learning paths (beginner/intermediate/advanced)
+-  Structured multi-stage project planning
+-  Coach-mode teaching (hints over solutions)
+-  Semantic search over React/TypeScript documentation
+-  Code analysis and feedback tools
+-  Dynamic re-planning for scope changes
+-  Three interaction modes: CLI, LangGraph Studio, and Web UI
 
 ## Reason for picking up this project
 
-This project comprehensively demonstrates all major topics from MAT496:
+This project is built on the philosphy of "learning from mistakes", the agent helps you learn how to write your code so you can learn while doing which helps in learning the foundations, and helps/points you towards where you went wrong and what could be the correct approach. 
+
+This project also comprehensively demonstrates all major topics from MAT496:
 
 **1. Prompting**  
 Each LangGraph node uses carefully designed system prompts. The coaching node enforces "coach mode" to provide hints rather than full solutions, while onboarding and planning nodes guide structured information extraction.
@@ -150,11 +152,11 @@ langgraph dev
 Then open your browser to the provided URL (typically `http://localhost:8123`).
 
 **LangGraph Studio Features:**
-- 📊 Visual graph representation of agent flow
-- 🔍 Step-by-step state inspection
-- 🐛 Debug node transitions and routing
-- 📝 View message history and state changes
-- ⚡ Test specific nodes in isolation
+-  Visual graph representation of agent flow
+-  Step-by-step state inspection
+-  Debug node transitions and routing
+-  View message history and state changes
+-  Test specific nodes in isolation
 
 **How to use:**
 1. The studio will automatically detect `langgraph.json`
@@ -177,13 +179,13 @@ streamlit run streamlit_app.py --server.port 8501
 Then open your browser to `http://localhost:8501`
 
 **Web UI Features:**
-- 🌙 Modern dark mode interface
-- 💬 Chat-based interaction
-- 📊 Visual progress tracking
-- 🎯 Quick action buttons (Continue, Practice, Mark Done)
-- 📚 Collapsible sections for stages and features
-- 🚀 Quick start templates (Todo App, E-commerce, Chat App)
-- 📱 Responsive design
+-  Modern dark mode interface
+-  Chat-based interaction
+-  Visual progress tracking
+-  Quick action buttons (Continue, Practice, Mark Done)
+-  Collapsible sections for stages and features
+-  Quick start templates (Todo App, E-commerce, Chat App)
+-  Responsive design
 
 **How to use:**
 1. Choose a quick start template or type your project idea
@@ -346,20 +348,21 @@ I had planned to achieve a **React/TypeScript Learning Coach** that:
 3. Guides learners through building React apps without directly writing code for them
 4. Provides multiple interaction modes (CLI, LangGraph Studio, Web UI)
 
-**Achievement Status: SATISFIED** ✅
+**Achievement Status: Accomplished** 
 
 **What worked well:**
-- ✅ **LangGraph implementation**: Clean state management with typed GraphState, well-defined nodes, and robust conditional routing
-- ✅ **Course topic coverage**: All MAT496 topics integrated naturally - prompting in every node, structured output for onboarding/planning, semantic search via `fetch_docs()`, RAG in coaching responses, and tool-calling for both docs and code analysis
-- ✅ **Coach mode effectiveness**: The agent successfully provides hints and guidance rather than complete solutions, encouraging active learning
-- ✅ **RAG quality**: Retrieving React/TS docs and injecting them into prompts significantly improved answer accuracy and reduced hallucinations
-- ✅ **Adaptability**: Re-planning feature works smoothly when users add/change features mid-project
-- ✅ **User experience**: Three interaction modes (CLI, Studio, Web UI) provide flexibility for different use cases
-- ✅ **Code quality**: Comprehensive error handling, proper state management, and clean separation of concerns
+-  **LangGraph implementation**: Clean state management with typed GraphState, well-defined nodes, and robust conditional routing
+-  **Course topic coverage**: All MAT496 topics integrated naturally - prompting in every node, structured output for onboarding/planning, semantic search via `fetch_docs()`, RAG in coaching responses, and tool-calling for both docs and code analysis
+-  **Coach mode effectiveness**: The agent successfully provides hints and guidance rather than complete solutions, encouraging active learning
+-  **RAG quality**: Retrieving React/TS docs and injecting them into prompts significantly improved answer accuracy and reduced hallucinations
+-  **Adaptability**: Re-planning feature works smoothly when users add/change features mid-project
+-  **User experience**: Three interaction modes (CLI, Studio, Web UI) provide flexibility for different use cases
+-  **Code quality**: Comprehensive error handling, proper state management, and clean separation of concerns
 
 **What could be improved:**
 - The docs store is currently small and curated - could be expanded with more comprehensive React/TypeScript documentation
-- Code analysis tool uses simple heuristics - could integrate actual linters or TypeScript compiler checks
+- Code analysis tool uses simple methods to examine code and return - could integrate actual linters or TypeScript compiler checks for indepth examination enhancing learner's knowledge
+- User Experience on Web UI can be improved to include commands for seamless conversation at every step of an interaction
 - Web UI could add more features like saving conversation history or exporting learning plans
 
 **Overall**: This project successfully demonstrates mastery of LangGraph and all course concepts while creating a genuinely useful learning tool. The agent maintains coherent state across complex interactions, leverages RAG effectively, and provides meaningful educational guidance. I am satisfied with the comprehensive implementation and the practical utility of the final product.
