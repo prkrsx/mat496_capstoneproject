@@ -23,7 +23,7 @@ This project is a **React/TypeScript Learning Coach Agent** built with Python an
 
 ## Reason for picking up this project
 
-This project is built on the philosphy of "learning from mistakes", the agent helps you learn how to write your code so you can learn while doing which helps in learning the foundations, and helps/points you towards where you went wrong and what could be the correct approach. 
+This project is built on the philosphy of "learning from mistakes", the agent helps you learn how to write your code so you can learn while doing which helps in learning and improving the foundations by helpingor pointing you towards where you went wrong and what could be the correct approach instead of providing the whole code or build just the entire project for you.
 
 This project also comprehensively demonstrates all major topics from MAT496:
 
@@ -54,7 +54,7 @@ Complete LangGraph implementation with:
 
 ## Video Summary Link
 
-](https://drive.google.com/file/d/1ECpbVE2iTy6ZztltkD5MyJfBO6-yHb6t/view?usp=sharing)
+(https://drive.google.com/file/d/1ECpbVE2iTy6ZztltkD5MyJfBO6-yHb6t/view?usp=sharing)
 
 ## Installation & Setup
 
