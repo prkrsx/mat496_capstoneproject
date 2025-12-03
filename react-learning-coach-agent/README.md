@@ -54,7 +54,7 @@ Complete LangGraph implementation with:
 
 ## Video Summary Link
 
-(https://www.loom.com/share/763e8c6eb265408c868898d5bcf88709)
+](https://drive.google.com/file/d/1ECpbVE2iTy6ZztltkD5MyJfBO6-yHb6t/view?usp=sharing)
 
 ## Installation & Setup
 
