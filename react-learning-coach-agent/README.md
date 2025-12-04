@@ -1,4 +1,4 @@
-# Title: React/TypeScript Learning Coach Agent
+# React/TypeScript Learning Coach Agent
 
 ## Overview
 
@@ -23,7 +23,7 @@ This project is a **React/TypeScript Learning Coach Agent** built with Python an
 
 ## Reason for picking up this project
 
-This project is built on the philosphy of "learning from mistakes", the agent helps you learn how to write your code so you can learn while doing which helps in learning and improving the foundations by helpingor pointing you towards where you went wrong and what could be the correct approach instead of providing the whole code or build just the entire project for you.
+This project is built on the philosophy of “learning from mistakes”. The agent helps you learn how to write your code by allowing you to learn while doing, which aids in learning and improving the foundations. Instead of providing the entire code or building the entire project for you, it helps or points you towards where you went wrong and suggests the correct approach.
 
 This project also comprehensively demonstrates all major topics from MAT496:
 
