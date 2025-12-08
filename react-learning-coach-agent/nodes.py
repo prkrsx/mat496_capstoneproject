@@ -7,7 +7,7 @@ load_dotenv()
 from langchain_openai import ChatOpenAI
 from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 from state import GraphState
-from tools import fetch_docs
+from tools import fetch_docs, analyze_code_snippet
 
 llm = ChatOpenAI(model="gpt-4o-mini")
 
@@ -209,6 +209,32 @@ def coaching_node(state: GraphState) -> GraphState:
         ))
         state["status"] = "coaching"
         return state
+
+    # Check if user is sharing code for review
+    if "```" in state["messages"][-1].content:
+        # Extract code from message (find code block)
+        code_match = re.search(r'```(?:javascript|typescript|jsx|tsx|js|ts)?\s*\n(.*?)```', 
+                               state["messages"][-1].content, re.DOTALL)
+        if code_match:
+            code = code_match.group(1).strip()
+            stage_info = f"Stage: {stage['name']}\nGoal: {stage['goal']}\nFundamentals: {', '.join(stage.get('fundamentals', []))}"
+            
+            try:
+                feedback = analyze_code_snippet(code, stage_info)
+                
+                state["messages"].append(AIMessage(
+                    f"📍 **Stage {idx+1}/{len(stages)}: {stage['name']}**\n\n"
+                    f"## 🔍 Code Review\n\n"
+                    f"**Issues Found:**\n{feedback.get('issues', 'None detected')}\n\n"
+                    f"**Concepts to Review:**\n{feedback.get('suggested_fundamentals', 'N/A')}\n\n"
+                    f"**💡 Hint:**\n{feedback.get('high_level_hint', 'Keep practicing!')}\n\n"
+                    f"---\n💬 `continue` for more help • `exercises` for practice • `done` when ready"
+                ))
+                state["status"] = "coaching"
+                return state
+            except Exception as e:
+                # If code analysis fails, fall through to default coaching
+                pass
 
     # Default coaching or questions
     docs = fetch_docs(" ".join(stage.get("fundamentals", [])))

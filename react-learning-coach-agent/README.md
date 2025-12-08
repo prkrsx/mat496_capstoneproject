@@ -217,17 +217,21 @@ Onboarding Node (Structured Output)
     ↓
 Planning Node (Multi-stage Plan)
     ↓
-Coaching Node ←──────┐
-    ↓                │
-Tools Called:        │
-- fetch_docs()       │ (Loop until done)
-- analyze_code()     │
-    ↓                │
-Response + RAG ──────┘
+Coaching Node ←──────────────────┐
+    ↓                            │
+Tools Called:                    │
+- fetch_docs()                   │ (Loop until done)
+- analyze_code_snippet()         │
+    ↓                            │
+Response + RAG ──────────────────┘
     ↓
-Re-planning (if feature added)
+Re-planning (if feature/level change)
     ↓
-Completion
+Planning Node (Regenerate Plan)
+    ↓
+Back to Coaching ←───────────────┘
+    ↓
+Completion (all stages done)
 ```
 
 ## Examples

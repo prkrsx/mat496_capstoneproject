@@ -45,13 +45,13 @@ def analyze_code_snippet(code: str, stage_info: str) -> Dict[str, str]:
     )
     human = HumanMessage(
         content=(
-            f"User code:\n``````\n\n"
+            f"User code:\n```\n{code}\n```\n\n"
             f"Stage context:\n{stage_info}\n\n"
             "Return JSON:\n"
             "{\n"
-            '  \"issues\": string,\n'
-            '  \"suggested_fundamentals\": string,\n'
-            '  \"high_level_hint\": string\n'
+            '  "issues": "string describing issues found",\n'
+            '  "suggested_fundamentals": "string with concepts to review",\n'
+            '  "high_level_hint": "string with coaching hint"\n'
             "}\n"
         )
     )
